@@ -1,0 +1,14 @@
+---
+
+- name: start scylla-server and set boot start
+  service:
+    name:    'scylla-server'
+    enabled: yes
+    state:   started
+
+- name: start scylla-jmx and set boot start
+  service:
+    name:    'scylla-jmx'
+    enabled: yes
+    state:   started
+  when: manage_scylla_jmx_service

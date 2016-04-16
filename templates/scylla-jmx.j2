@@ -1,0 +1,3 @@
+{% for key,value in scylladb_jmx|dictsort(by="key") %}
+{{key}}={{value}}
+{% endfor %}

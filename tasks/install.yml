@@ -1,0 +1,17 @@
+---
+
+- name: install debian/ubuntu source list
+  apt_repository:
+    repo: "{{scylladb_deb_repo}}"
+    state: present
+    update_cache: yes
+
+- name: install scylladb
+  apt:
+    name:  "{{item}}"
+    force: yes
+    state: "{{scylladb_version_state}}"
+  with_items:
+    - scylla-server
+    - scylla-jmx
+    - scylla-tools
