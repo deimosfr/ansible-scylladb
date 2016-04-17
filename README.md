@@ -1,6 +1,8 @@
 Ansible ScyllaDB role
 =====
 
+[![Build Status](https://travis-ci.org/deimosfr/ansible-scylladb.svg?branch=master)](https://travis-ci.org/deimosfr/ansible-scylladb)
+
 This role installs and configures ScyllaDB on a server.
 
 Requirements
